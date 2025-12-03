@@ -15,7 +15,13 @@ export default function Home() {
         <div className="flex flex-col w-fit">
             <h1 ref={resumeRef} className="font-bold text-3xl text-white pt-5">Nathaniel Knerr</h1>
             <span className="text-lg text-white pt-5">
-                La Habra, CA, 90631 — <a href="tel:+15628446841" className="text-blue-400 underline">+1 (562) 844 6841</a> — <a className="text-blue-400 underline" href="mailto:n.knerr@yahoo.com">n.knerr@yahoo.com</a>
+                La Habra, CA
+            </span>
+            <span className="text-lg text-white">
+                <a href="tel:+15628446841" className="text-blue-400 underline">+1 (562) 844 6841</a>
+            </span>
+            <span className="text-lg text-white">
+                <a className="text-blue-400 underline" href="mailto:n.knerr@yahoo.com">n.knerr@yahoo.com</a>
             </span>
             <p className="font-bold italic text-lg text-white pt-5">
                 Fullstack developer specializing in React, Angular, containerization, AI systems, and relational databases
