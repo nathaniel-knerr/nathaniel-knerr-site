@@ -33,7 +33,7 @@ export default function Sidebar({resumeRef, projectsRef}: SidebarProps) {
                     <button onClick={scrollToResumeRef} className="text-white w-1/1 text-lg hover:underline bg-gray-800 py-5">Resume</button>
                 </div>
                 <div className="border-b-2 border-transparent bg-linear-to-r from-green-400 to-blue-400">
-                    <button onClick={scrollToProjectsRef} class="text-white w-1/1 text-lg hover:underline bg-gray-800 py-5">Projects</button>
+                    <button onClick={scrollToProjectsRef} className="text-white w-1/1 text-lg hover:underline bg-gray-800 py-5">Projects</button>
                 </div>
             </div>
         </div>
