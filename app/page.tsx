@@ -1,65 +1,82 @@
-import Image from "next/image";
+'use client'
+import Sidebar from "./components/sidebar"
+import Project from "./components/project"
+import { useRef } from "react";
+
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    const resumeRef = useRef<HTMLDivElement>(null);
+    const projectsRef = useRef<HTMLDivElement>(null);
+
+    return(
+        <div className="flex flex-col justify-center items-center bg-gray-800">
+        <Sidebar resumeRef={resumeRef} projectsRef={projectsRef}></Sidebar>
+        <div className="flex flex-col items-center py-10 pl-10 w-2/3">
+        <div className="flex flex-col w-fit">
+            <h1 ref={resumeRef} className="font-bold text-3xl text-white pt-5">Nathaniel Knerr</h1>
+            <span className="text-lg text-white pt-5">
+                La Habra, CA, 90631 — <a href="tel:+15628446841" class="text-blue-400 underline">+1 (562) 844 6841</a> — <a class="text-blue-400 underline" href="mailto:n.knerr@yahoo.com">n.knerr@yahoo.com</a>
+            </span>
+            <p className="font-bold italic text-lg text-white pt-5">
+                Fullstack developer specializing in React, Angular, containerization, AI systems, and relational databases
+            </p>
+            <h2 className="font-bold text-2xl text-white pt-15">Work Experience</h2>
+            <h3 className="text-xl text-white pt-5">
+                Deepiri AI — AI Systems Engineer Internship — 2025 to Present:
+            </h3>
+            <ul className="text-lg text-white list-disc">
+                <li className="pt-5">
+                    Built and maintained inference servers using FastAPI/Uvicorn; scaled model-serving pipelines with Docker/Kubernetes
+                </li>
+                <li className="pt-5">
+                    Optimized request handling, concurrency, and GPU memory usage; supported versioned deployment of AI models
+                </li>
+                <li className="pt-5">
+                    Assisted in A/B testing, monitoring model performance, and collaborating on CI/CD pipelines
+                </li>
+            </ul>
+            <h2 className="font-bold text-2xl text-white pt-15" >Education</h2>
+            <ul className="text-lg text-white list-disc">
+                <li className="pt-5">
+                    Cypress College — A.S. in Computer Science (Transferring to B.S.) — Expected 2029
+                </li>
+                <li className="pt-5">
+                    Google Mentorship — 2025 to Present
+                </li>
+                <li className="pt-5">
+                    Completed Google for Developers Courses — Linear and Logistic Regression for Machine Learning
+                </li>
+                <li className="pt-5">
+                    La Habra High School — Highest Honors Graduate — 4.2 GPA Skills
+                </li>
+            </ul>
+            <h2 className="font-bold text-2xl text-white pt-15">Skills</h2>
+            <ul className="text-lg text-white list-disc">
+                <li className="pt-5">
+                    Languages: JavaScript, TypeScript, Python, SQL
+                </li>
+                <li className="pt-5">
+                    Frameworks & Libraries: React, Angular, Express.js, Next.js, Tailwind CSS, FastAPI, Uvicorn, Puppeteer, Playwright, Scikit-Learn
+                </li>
+                <li className="pt-5">
+                    Databases: MySQL, PostgreSQL, Firebase
+                </li>
+                <li className="pt-5">
+                    Tools: Git, GitHub, Docker, Kubernetes, Linux (Ubuntu), VS Code, Netlify, Vercel, Render
+                </li>
+                <li className="pt-5">
+                    Concepts: REST APIs, Machine Learning (Regression, Neural Networks), CI/CD pipelines, Web Automation
+                </li>
+            </ul>
+            <h2 ref={projectsRef} className="font-bold text-2xl text-white pt-15">Personal Projects</h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="flex flex-wrap justify-center gap-10">
+            <Project projectName="Simple Media" projectDescription="A social media app that is better for your mental health"></Project>
+            <Project projectName="Diction Daily" projectDescription="An educational tool that teaches a new English word every day"></Project>
+            <Project projectName="Snapshot API" projectDescription="An easy to use web scraping tool to document public webpages in frontend development environments"></Project>
+            <Project projectName="Application Monkey" projectDescription="An automated cover letter generator"></Project>
         </div>
-      </main>
-    </div>
-  );
+        </div>
+        </div>
+    )
 }
