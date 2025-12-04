@@ -27,23 +27,23 @@ body {
 
 /* Width of the scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 /* Track (background) */
 ::-webkit-scrollbar-track {
   background: white; 
-  border-radius: 6px;
+  border-radius: 0px;
 }
 
 /* Scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background-color: #4ade80; /* green */
-  border-radius: 6px;
-  border: 3px solid white; /* padding around thumb */
+  background: linear-gradient(oklch(70.7% 0.165 254.624), #05df72); /* green */
+  border-radius: 0px;
+  border: 0px solid white; /* padding around thumb */
 }
 
 /* Hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #16a34a;
+  background: linear-gradient();
 }

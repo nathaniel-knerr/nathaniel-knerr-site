@@ -4,8 +4,10 @@ interface ProjectProps {
 }
 export default function Project({projectName, projectDescription}: ProjectProps) {
     // <img src="" placeholder="Simple Media Image"/>
+
+    
     return(
-        <div className="w-1/4 min-w-[280px] text-white py-10">
+        <a href={`/project/${encodeURIComponent(projectName.toLowerCase())}`} className="w-1/4 min-w-[280px] text-white py-10">
             <h2 className="text-xl font-bold">
                 {projectName}
             </h2>
@@ -13,6 +15,6 @@ export default function Project({projectName, projectDescription}: ProjectProps)
             <p className="text-lg">
                 {projectDescription}
             </p>
-        </div>
+        </a>
     )
 }

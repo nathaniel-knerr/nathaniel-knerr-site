@@ -29,10 +29,10 @@ export default function Sidebar({resumeRef, projectsRef}: SidebarProps) {
     return(
         <div className="fixed top-0 left-0 w-1/6 py-5">
             <div className="flex flex-col w-100% justify-center text-center">
-                <div className="border-b-2 border-transparent bg-linear-to-r from-green-400 to-blue-400">
+                <div className="border-b-8 border-transparent bg-linear-to-r from-green-400 to-blue-400">
                     <button onClick={scrollToResumeRef} className="text-white w-1/1 text-lg hover:underline bg-gray-800 py-5">Resume</button>
                 </div>
-                <div className="border-b-2 border-transparent bg-linear-to-r from-green-400 to-blue-400">
+                <div className="border-b-8 border-transparent bg-linear-to-r from-green-400 to-blue-400">
                     <button onClick={scrollToProjectsRef} className="text-white w-1/1 text-lg hover:underline bg-gray-800 py-5">Projects</button>
                 </div>
             </div>
